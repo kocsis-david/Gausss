@@ -1,0 +1,13 @@
+
+
+java:S1130"qRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from constructor's body.(íÊßØ8ú½Š»1
+w
+java:S22342"UParameters to get have the same names but not the same order as the method arguments.(ŸŸ§ªüÿÿÿÿ8„ú½Š»1
+O
+java:S1128"2Remove this unused import 'javax.imageio.ImageIO'.(‘çÔû8„ú½Š»1
+B
+java:S1128"%Remove this unused import 'java.awt'.(ï´µ©8…ú½Š»1
+X
+java:S1128"6Remove this unused import 'java.awt.image.DataBuffer'.(İ²Âüÿÿÿÿ8…ú½Š»1
+F
+java:S1128")Remove this unused import 'java.io.File'.(†Ğ¥Å8…ú½Š»1

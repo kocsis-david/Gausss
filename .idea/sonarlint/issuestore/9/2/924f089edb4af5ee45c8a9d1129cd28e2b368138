@@ -1,0 +1,15 @@
+
+k
+java:S1192"IDefine a constant instead of duplicating this literal "kesz.png" 3 times.(×—²øÿÿÿÿ8è›Ë¼1
+k
+java:S1192"IDefine a constant instead of duplicating this literal "test.png" 3 times.(™¿®øÿÿÿÿ8è›Ë¼1
+G	java:S106"+Replace this use of System.out by a logger.(ŸÎÌ´8ò›Ë¼1
+f
+java:S3252)"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(¢¡´8ô›Ë¼1
+L	java:S1063"+Replace this use of System.out by a logger.(‹Éûºøÿÿÿÿ8ö›Ë¼1
+g
+java:S3252<"EUse static access with "javax.swing.SwingConstants" for "HORIZONTAL".(•é®Ùıÿÿÿÿ8÷›Ë¼1
+L	java:S106="+Replace this use of System.out by a logger.(®ê™øÿÿÿÿ8÷›Ë¼1
+b
+java:S3252@"EUse static access with "javax.swing.SwingConstants" for "HORIZONTAL".(£«¤ˆ8ø›Ë¼1
+L	java:S106A"+Replace this use of System.out by a logger.(´²°·úÿÿÿÿ8ù›Ë¼1

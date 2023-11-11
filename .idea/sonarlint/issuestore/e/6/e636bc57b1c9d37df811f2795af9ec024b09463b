@@ -1,0 +1,21 @@
+
+X
+java:S2184X"BCast one of the operands of this addition operation to a "double".(Íû—Ü
+P
+java:S1118":Add a private constructor to hide the implicit public one.(Şõ¤Ô
+A
+java:S1905"&Remove this unnecessary cast to "int".( °¡üÿÿÿÿ
+;
+java:S1905*"&Remove this unnecessary cast to "int".(É«<
+Y
+java:S1659M">Declare "w" and all following declarations on a separate line.(ıö³Ëüÿÿÿÿ
+<
+java:S1905T"&Remove this unnecessary cast to "int".(ÉğŠ
+<
+java:S1905V"&Remove this unnecessary cast to "int".(½¹¦Í
+;
+java:S2437\" Remove this silly bit operation.(·ÿ¦’ıÿÿÿÿ
+T
+java:S1659d">Declare "g" and all following declarations on a separate line.(èù€Š
+<
+java:S1905e"&Remove this unnecessary cast to "int".(Šğˆˆ

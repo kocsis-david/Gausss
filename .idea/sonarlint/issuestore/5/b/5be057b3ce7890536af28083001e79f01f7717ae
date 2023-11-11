@@ -1,0 +1,34 @@
+
+\
+java:S1118":Add a private constructor to hide the implicit public one.(¾ÿ„Œşÿÿÿÿ8‚£Î¼1
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôÆó¿8‚£Î¼1
+o
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 33 to the 15 allowed.(ôÆó¿8ƒ£Î¼1
+R
+java:S1854,"5Remove this useless assignment to local variable "i".(Ş¼Ş¢8„£Î¼1
+`
+java:S1659">Declare "x" and all following declarations on a separate line.(¥Î›ÿøÿÿÿÿ8…£Î¼1
+]
+java:S1659"@Declare "div" and all following declarations on a separate line.(´ËÊÏ8…£Î¼1
+A
+java:S1659"Declare "p" on a separate line.(ëª«ûÿÿÿÿÿ8…£Î¼1
+G
+java:S1197"*Move the array designators [] to the type.(´ËÊÏ8…£Î¼1
+j	java:S100D"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó¨ÁÈ8‰£Î¼1
+[
+java:S1854E"9Remove this useless assignment to local variable "gauss".(¸¡Àùÿÿÿÿ8‰£Î¼1
+J
+java:S1172D"-Remove this unused method parameter "image2".(ó¨ÁÈ8Š£Î¼1
+L
+java:S1481E"*Remove this unused "gauss" local variable.(¸¡Àùÿÿÿÿ8Š£Î¼1
+j	java:S100L"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙÇ÷ï8Š£Î¼1
+O
+java:S1128"2Remove this unused import 'javax.imageio.ImageIO'.(‘çÔû8ò·Ö¼1
+[
+java:S1128"9Remove this unused import 'java.awt.image.BufferedImage'.(×íĞ‡şÿÿÿÿ8ò·Ö¼1
+F
+java:S1128")Remove this unused import 'java.io.File'.(†Ğ¥Å8ò·Ö¼1
+R
+java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8ò·Ö¼1
+M
+java:S1128"0Remove this unused import 'java.io.InputStream'.(¹»º8ò·Ö¼1
