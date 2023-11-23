@@ -1,0 +1,12 @@
+
+s
+java:S1104"QMake width a static final constant or non-public and provide accessors if needed.(ã†¦Üüÿÿÿÿ8Íş„Ã¿1
+t
+java:S1104"RMake height a static final constant or non-public and provide accessors if needed.(®º€şÿÿÿÿ8Íş„Ã¿1
+r
+java:S1104	"PMake rows a static final constant or non-public and provide accessors if needed.(Ë¤ĞŞıÿÿÿÿ8Íş„Ã¿1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(×ó‹ğüÿÿÿÿ8Îş„Ã¿1
+
+java:S1130 "qRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from constructor's body.(íÊßØ8Úş„Ã¿1
+T
+java:S1128"7Remove this unused import 'Algoritmus.BufferFunctions'.(úÉÍË8Üş„Ã¿1

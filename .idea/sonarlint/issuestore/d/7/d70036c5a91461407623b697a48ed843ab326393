@@ -1,0 +1,11 @@
+
+g	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¶‡†•¿1
+J
+java:S1604="(Make this anonymous inner class a lambda(¿×†‘şÿÿÿÿ8¹‡†•¿1
+E
+java:S1604H"(Make this anonymous inner class a lambda(‰•Œ¿8¹‡†•¿1
+E
+java:S1604S"(Make this anonymous inner class a lambda(µèëœ8¹‡†•¿1
+J
+java:S1604_"(Make this anonymous inner class a lambda(ÂìÅ‚üÿÿÿÿ8¹‡†•¿1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÒÇ¶›8‚ãŸ½¿1
