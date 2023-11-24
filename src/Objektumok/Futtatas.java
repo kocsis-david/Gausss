@@ -37,19 +37,19 @@ String date;
         return sigma2;
     }
 
-    public File getBlur1() {
-        return blur1;
+    public String getBlur1() {
+        return "outpics/"+blur1.toString();
     }
 
-    public File getBlur2() {
-        return blur2;
+    public String getBlur2() {
+        return "outpics/"+blur2.toString();
     }
 
-    public File getDog() {
-        return dog;
+    public String getDog() {
+        return "outpics/"+dog.toString();
     }
 
-    public File getCanny() {
-        return canny;
+    public String getCanny() {
+        return "outpics/"+canny.toString();
     }
 }

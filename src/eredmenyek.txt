@@ -1,1 +1,4 @@
 Screenshot_20221203_215156b1.png;Screenshot_20221203_215156b2.png;Screenshot_20221203_215156dog.png;Screenshot_20221203_215156canny.png;1;10;Fri Nov 24 03:00:02 CET 2023
+erdob1.png;erdob2.png;erdodog.png;erdocanny.png;1;10;Fri Nov 24 17:22:20 CET 2023
+imageonlineb1.png;imageonlineb2.png;imageonlinedog.png;imageonlinecanny.png;1;10;Fri Nov 24 17:22:52 CET 2023
+imageonlineb1.png;imageonlineb2.png;imageonlinedog.png;imageonlinecanny.png;1;5;Fri Nov 24 18:35:34 CET 2023

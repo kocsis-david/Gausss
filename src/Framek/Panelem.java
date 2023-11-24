@@ -163,23 +163,22 @@ public class Panelem extends JFrame {
             JComboBox<String> savedRunschoose = new JComboBox<>(new String[]{"Blur1", "Blur2", "Dog","Canny"});
             savedRunsFiles.addActionListener(e1 -> {
                 Futtatas futtatas = (Futtatas) savedRunsFiles.getSelectedItem();
-                String hely="outpics/";
                 switch ((String) savedRunschoose.getSelectedItem()) {
                     case "Blur1":
-                        hely += futtatas.getBlur1().toString();
-                        selectedimage= new File(hely);
+
+                        selectedimage= new File(futtatas.getBlur1());
                         break;
                     case "Blur2":
-                        hely += futtatas.getBlur2().toString();
-                        selectedimage = new File(hely);
+
+                        selectedimage = new File(futtatas.getBlur2());
                         break;
                     case "Dog":
-                        hely += futtatas.getDog().toString();
-                        selectedimage = new File(hely);
+
+                        selectedimage = new File(futtatas.getDog());
                         break;
                     case "Canny":
-                        hely += futtatas.getCanny().toString();
-                        selectedimage = new File(hely);
+
+                        selectedimage = new File(futtatas.getCanny());
                         break;
                 }
                 sigma1 = futtatas.getSigma1();

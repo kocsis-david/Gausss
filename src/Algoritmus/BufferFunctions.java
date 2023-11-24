@@ -1,6 +1,7 @@
 package Algoritmus;
 
 import javax.imageio.ImageIO;
+import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -21,8 +22,9 @@ public class BufferFunctions {
             BufferedImage image = ImageIO.read(path);
             return image;
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            JOptionPane.showMessageDialog(null, "Nem sikerült a képet betölteni!", "Hiba", JOptionPane.ERROR_MESSAGE);
         }
+        return null;
     }
 
     public static BufferedImage reSizer(BufferedImage img){
