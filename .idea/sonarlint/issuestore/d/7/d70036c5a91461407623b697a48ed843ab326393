@@ -1,16 +1,25 @@
 
-g	java:S112 "FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8€Òøõ¿1
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÒÇ¶›8ƒÒøõ¿1
+g	java:S112$"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ŞØŒø¿1
+g	java:S112["FDefine and throw a dedicated exception instead of using a generic one.(¼ÿ¾¹ÿÿÿÿÿ8ŞØŒø¿1
+f
+java:S1192P"IDefine a constant instead of duplicating this literal "outpics/" 4 times.(Èùˆ8áØŒø¿1
+r	java:S117I"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙÁÿ´ûÿÿÿÿ8áØŒø¿1
+J
+java:S1604K"(Make this anonymous inner class a lambda(ìÃ€™üÿÿÿÿ8áØŒø¿1
+E
+java:S1604e"(Make this anonymous inner class a lambda(˜÷÷Ù8áØŒø¿1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÒÇ¶›8âØŒø¿1
+M
+java:S1948"+Make "gaussian1" transient or serializable.(Ã™„òøÿÿÿÿ8íØŒø¿1
+H
+java:S1948"+Make "gaussian2" transient or serializable.(ãí õ8íØŒø¿1
+H
+java:S1948"&Make "dogi" transient or serializable.(‚ –áøÿÿÿÿ8íØŒø¿1
+D
+java:S1948"'Make "canny" transient or serializable.(áªèŒ8íØŒø¿1
 i
-java:S3252"LUse static access with "javax.swing.WindowConstants" for "DISPOSE_ON_CLOSE".(Òœ Ğ8öÏ€ö¿1
+java:S3252"LUse static access with "javax.swing.WindowConstants" for "DISPOSE_ON_CLOSE".(Òœ Ğ8ïØŒø¿1
 v
-java:S3252;"YUse static access with "javax.swing.ScrollPaneConstants" for "VERTICAL_SCROLLBAR_ALWAYS".(àıÍ8‹Òøõ¿1
+java:S3252?"YUse static access with "javax.swing.ScrollPaneConstants" for "VERTICAL_SCROLLBAR_ALWAYS".(àıÍ8ñØŒø¿1
 x
-java:S3252;"[Use static access with "javax.swing.ScrollPaneConstants" for "HORIZONTAL_SCROLLBAR_ALWAYS".(àıÍ8ŒÒøõ¿1
-O
-java:S1128"2Remove this unused import 'javax.imageio.ImageIO'.(‘çÔû8ŒÒøõ¿1
-T
-java:S1128	"7Remove this unused import 'java.awt.event.ActionEvent'.(Úù“‘8ŒÒøõ¿1
-W
-java:S1128
-":Remove this unused import 'java.awt.event.ActionListener'.(Ìä¹8ŒÒøõ¿1
+java:S3252?"[Use static access with "javax.swing.ScrollPaneConstants" for "HORIZONTAL_SCROLLBAR_ALWAYS".(àıÍ8ñØŒø¿1

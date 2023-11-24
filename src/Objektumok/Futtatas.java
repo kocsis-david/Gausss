@@ -10,9 +10,9 @@ File dog;
 File canny;
 int sigma1;
 int sigma2;
-Date date;
+String date;
 
-    public Futtatas(File blur1, File blur2, File dog, File canny, int sigma1, int sigma2, Date date) {
+    public Futtatas(File blur1, File blur2, File dog, File canny, int sigma1, int sigma2, String date) {
         this.blur1 = blur1;
         this.blur2 = blur2;
         this.dog = dog;
@@ -22,7 +22,7 @@ Date date;
         this.date = date;
     }
     public String toString(){
-        return "Blur1: "+blur1.getName()+"\nBlur2: "+blur2.getName()+"\nDog: "+dog.getName()+"\nCanny: "+canny.getName()+"\nSigma1: "+sigma1+"\nSigma2: "+sigma2+"\nDate: "+date.toString();
+        return blur1.getName()+";"+blur2.getName()+";"+dog.getName()+";"+canny.getName()+";"+sigma1+";"+sigma2+";"+date;
     }
     @Override
     public int compareTo(Futtatas o) {

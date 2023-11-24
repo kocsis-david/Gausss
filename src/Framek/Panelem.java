@@ -20,18 +20,18 @@ import java.util.Scanner;
 public class Panelem extends JFrame {
     private File selectedimage;
     private int sigma1=1;
-    private int sigma2=4;
+    private int sigma2=10;
     private JLabel jLabel1=new JLabel();
     static File folder = new File("testpics");
     public static File[] listOfFiles= folder.listFiles();
-    LinkedList<Futtatas> listOfRuns = new LinkedList<>();
+    public static LinkedList<Futtatas> listOfRuns = new LinkedList<>();
 
     {
         try {
             Scanner scanner = new Scanner(new File("src/eredmenyek.txt"));
             while (scanner.hasNextLine()){
-                String[] line = scanner.nextLine().split(" ");
-                listOfRuns.add(new Futtatas(new File(line[0]),new File(line[1]),new File(line[2]),new File(line[3]),Integer.parseInt(line[4]),Integer.parseInt(line[5]),new Date(Long.parseLong(line[6]))));
+                String[] line = scanner.nextLine().split(";");
+                listOfRuns.add(new Futtatas(new File(line[0]),new File(line[1]),new File(line[2]),new File(line[3]),Integer.parseInt(line[4]),Integer.parseInt(line[5]),line[6]));
             }
             scanner.close();
         } catch (FileNotFoundException e) {
@@ -48,6 +48,7 @@ public class Panelem extends JFrame {
         setVisible(true);
         selectedimage=listOfFiles[0];
         BufferedImage selimage = BufferFunctions.loadImage(selectedimage);
+        selimage = BufferFunctions.reSizer(selimage);
         setSize(selimage.getWidth(),selimage.getHeight());
         addMenu();
         JPanel hatter=new JPanel();
@@ -82,15 +83,17 @@ public class Panelem extends JFrame {
             paramsFrame.setVisible(true);
             JPanel paramsPanel = new JPanel();
             paramsPanel.setLayout(new GridLayout(2, 2));
-            JLabel sigma1Label = new JLabel("Sigma1");
-            JLabel sigma2Label = new JLabel("Sigma2");
+            JLabel sigma1Label = new JLabel("Sigma1: "+sigma1);
+            JLabel sigma2Label = new JLabel("Sigma2: "+sigma2);
            JSlider sigma1Slider = new JSlider(1, 10, 1);
-           JSlider sigma2Slider = new JSlider(1, 50, 4);
+           JSlider sigma2Slider = new JSlider(1, 50, 10);
             sigma1Slider.addChangeListener(e1 -> {
                 sigma1 = sigma1Slider.getValue();
+                sigma1Label.setText("Sigma1: " + sigma1);
             });
             sigma2Slider.addChangeListener(e1 -> {
                 sigma2 = sigma2Slider.getValue();
+                sigma2Label.setText("Sigma2: " + sigma2);
             });
             paramsPanel.add(sigma1Label);
             paramsPanel.add(sigma1Slider);
@@ -117,9 +120,8 @@ public class Panelem extends JFrame {
                 }
 
                 BufferedImage image = BufferFunctions.loadImage(selectedFile);
-                BufferedImage grayImage = BufferFunctions.toGrayScale(image);
-                grayImage = BufferFunctions.reSizer(grayImage);
-                jLabel1.setIcon(new ImageIcon(grayImage));
+                image = BufferFunctions.reSizer(image);
+                jLabel1.setIcon(new ImageIcon(image));
                 selectedimage = selectedFile;
                 pack();
             }
@@ -138,6 +140,7 @@ public class Panelem extends JFrame {
             testFiles.addActionListener(e1 -> {
                 selectedimage = (File) testFiles.getSelectedItem();
                 BufferedImage image = BufferFunctions.loadImage(selectedimage);
+                image = BufferFunctions.reSizer(image);
                 jLabel1.setIcon(new ImageIcon(image));
                 pack();
             });
@@ -160,18 +163,23 @@ public class Panelem extends JFrame {
             JComboBox<String> savedRunschoose = new JComboBox<>(new String[]{"Blur1", "Blur2", "Dog","Canny"});
             savedRunsFiles.addActionListener(e1 -> {
                 Futtatas futtatas = (Futtatas) savedRunsFiles.getSelectedItem();
+                String hely="outpics/";
                 switch ((String) savedRunschoose.getSelectedItem()) {
                     case "Blur1":
-                        selectedimage = futtatas.getBlur1();
+                        hely += futtatas.getBlur1().toString();
+                        selectedimage= new File(hely);
                         break;
                     case "Blur2":
-                        selectedimage = futtatas.getBlur2();
+                        hely += futtatas.getBlur2().toString();
+                        selectedimage = new File(hely);
                         break;
                     case "Dog":
-                        selectedimage = futtatas.getDog();
+                        hely += futtatas.getDog().toString();
+                        selectedimage = new File(hely);
                         break;
                     case "Canny":
-                        selectedimage = futtatas.getCanny();
+                        hely += futtatas.getCanny().toString();
+                        selectedimage = new File(hely);
                         break;
                 }
                 sigma1 = futtatas.getSigma1();
