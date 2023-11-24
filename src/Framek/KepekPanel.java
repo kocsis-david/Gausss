@@ -14,13 +14,14 @@ import java.io.IOException;
 
 public class KepekPanel extends JFrame {
     public KepekPanel(File path, int sigma1, int sigma2) {
-
-        setSize(800, 600);
-
+        setTitle("Képek");
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        setBounds(0, 0, screenSize.width, screenSize.height);
+        setSize(screenSize.width, screenSize.height);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         BufferedImage image = BufferFunctions.loadImage(path);  // A kép betöltése
         BufferedImage grayImage = BufferFunctions.toGrayScale(image); // A kép szürkeárnyalatosra alakítása
         grayImage = BufferFunctions.reSizer(grayImage); // A kép átméretezése
-
         Raster blur1=null;
         Raster blur2=null;
         // A képek létrehozása
@@ -36,10 +37,8 @@ public class KepekPanel extends JFrame {
         BufferedImage dogi = Raster.toImage(dog);
         BufferedImage gaussian1 = Raster.toImage(blur1);
         BufferedImage gaussian2 = Raster.toImage(blur2);
-
         DifferenceOfGaussian.CannyEdge(dog);  // A különbségkép éleit kiszámítja
         BufferedImage canny = Raster.toImage(dog);
-
         // A képek megjelenítése
         JLabel blurkepegy = new JLabel();
         blurkepegy.setIcon(new ImageIcon(gaussian1));
@@ -51,78 +50,16 @@ public class KepekPanel extends JFrame {
         cannykep.setIcon(new ImageIcon(canny));
 
 
-        // A mentés gombok létrehozása
-        JButton save1 = new JButton("Save blur1");
-        JButton save2 = new JButton("Save blur2");
-        JButton save3 = new JButton("Save DoG");
-        JButton save4 = new JButton("Save Canny");
-
-        // A gombok eseménykezelőinek hozzárendelése
-        save1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    ImageIO.write(gaussian1, "png", new File("outpics/blur1.png"));
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                }
-            }
-        });
-
-        save2.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    ImageIO.write(gaussian2, "png", new File("outpics/blur2.png"));
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                }
-            }
-        });
-
-        save3.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    ImageIO.write(dogi, "png", new File("outpics/dog.png"));
-
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                }
-            }
-        });
-
-        save4.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    ImageIO.write(canny, "png", new File("outpics/canny.png"));
-
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                }
-            }
-        });
-
-
-        BoxLayout boxLayout = new BoxLayout(this.getContentPane(), BoxLayout.Y_AXIS);
-        JPanel panel = new JPanel(new FlowLayout());
-        JPanel panel2 = new JPanel(new FlowLayout());
-        panel.setBackground(Color.CYAN);
-        panel2.setBackground(Color.CYAN);
-
+        JPanel panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
         panel.add(blurkepegy);
         panel.add(blurkepketto);
-        panel2.add(save4);
-        panel2.add(diffkep);
-        panel2.add(cannykep);
-        panel.add(save1);
-        panel.add(save2);
-        panel2.add(save3);
-        panel2.add(save4);
-        add(panel);
-        add(panel2);
-        setLayout(boxLayout);
+        panel.add(diffkep);
+        panel.add(cannykep);
+        JScrollPane scrollPane = new JScrollPane(panel, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+        scrollPane.setPreferredSize(new Dimension(screenSize.width, screenSize.height));
+
+        add(scrollPane);
         pack();
     }
 }

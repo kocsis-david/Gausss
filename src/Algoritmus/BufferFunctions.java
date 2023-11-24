@@ -8,11 +8,26 @@ import java.io.IOException;
 
 public class BufferFunctions {
     public static BufferedImage toGrayScale (BufferedImage img) {
-        BufferedImage grayImage = new BufferedImage(
-                img.getWidth(), img.getHeight(), BufferedImage.TYPE_BYTE_GRAY);  // A kép szürkeárnyalatosra alakítása
-        Graphics g = grayImage.getGraphics();
-        g.drawImage(img, 0, 0, null);    // A kép másolása
-        g.dispose();
+        int width = img.getWidth();
+        int height = img.getHeight();
+
+        BufferedImage grayImage = new BufferedImage(width, height, BufferedImage.TYPE_BYTE_GRAY);
+
+        for (int x = 0; x < width; x++) {
+            for (int y = 0; y < height; y++) {
+                int rgb = img.getRGB(x, y);
+
+                int r = (rgb >> 16) & 0xFF;
+                int g = (rgb >> 8) & 0xFF;
+                int b = rgb & 0xFF;
+
+                // A kép minden pixelének RGB értékeit átszámítjuk egy szürkeárnyalatú értékre.
+                int gray = (r + g + b) / 3;
+
+                grayImage.setRGB(x, y, gray);
+            }
+        }
+
         return grayImage;
     }
 

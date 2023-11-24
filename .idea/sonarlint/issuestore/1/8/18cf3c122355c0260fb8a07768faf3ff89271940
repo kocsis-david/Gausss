@@ -1,28 +1,35 @@
 
-g	java:S112R"FDefine and throw a dedicated exception instead of using a generic one.(¼ÿ¾¹ÿÿÿÿÿ8 ü©½¿1
-E
-java:S1604A"(Make this anonymous inner class a lambda(Èú†8£ü©½¿1
+K
+java:S1604í"(Make this anonymous inner class a lambda(ÈşÔ÷ıÿÿÿÿ8Š×¦õ¿1
+F
+java:S1604"(Make this anonymous inner class a lambda(¯ûõ8‹×¦õ¿1
 t
-java:S1104"WMake listOfFiles a static final constant or non-public and provide accessors if needed.(Íúª•8°ùÈ½¿1
+java:S1104"WMake listOfFiles a static final constant or non-public and provide accessors if needed.(Íúª•8‹×¦õ¿1
 N
-java:S1444"1Make this "public static listOfFiles" field final(Íúª•8°ùÈ½¿1
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÒÇ¶›8£ü©½¿1
-i
-java:S3973j"GUse indentation to denote the code conditionally executed by this "if".(—² Àÿÿÿÿÿ8£ü©½¿1
-˜
-java:S2681J"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(Ö˜á»8¤ü©½¿1
-¤
-java:S2681l"†This line will not be executed conditionally; only the first line of this 2-line block will be. The rest will execute unconditionally.(ßÄÀ8¤ü©½¿1
+java:S1444"1Make this "public static listOfFiles" field final(Íúª•8‹×¦õ¿1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÒÇ¶›8Œ×¦õ¿1
 :
-java:S2386"Make this member "protected".(Íúª•8µùÈ½¿1
+java:S2386"Make this member "protected".(Íúª•8—×¦õ¿1
 I
-java:S1948",Make "listOfRuns" transient or serializable.(÷õÂÖ8ÈÒ­¾¿1
+java:S1948",Make "listOfRuns" transient or serializable.(÷õÂÖ8—×¦õ¿1
 {
-java:S1171 "YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ8©ü©½¿1
-G	java:S106)"+Replace this use of System.out by a logger.(¥™„È8­ü©½¿1
-9
-java:S1116J"Remove this empty statement.(Ö˜á»8²ü©½¿1
-`
-java:S1155j">Use isEmpty() to check whether the collection is empty or not.(—² Àÿÿÿÿÿ8ÖÒ­¾¿1
+java:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ8™×¦õ¿1
+G	java:S106&"+Replace this use of System.out by a logger.(¥™„È8œ×¦õ¿1
+t
+java:S3776>"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(¿Ñ³Àüÿÿÿÿ8×¦õ¿1
+N
+java:S1602Y",Remove useless curly braces around statement(ŠşòÂıÿÿÿÿ8Ÿ×¦õ¿1
+N
+java:S1602\",Remove useless curly braces around statement(»ÿØĞşÿÿÿÿ8 ×¦õ¿1
+D	java:S131£""Add a default case to this switch.(è€§åıÿÿÿÿ8£×¦õ¿1
+D	java:S131Í""Add a default case to this switch.(…»êùÿÿÿÿÿ8¤×¦õ¿1
+I
+java:S1874õ"+Remove this use of "URL"; it is deprecated.(¾Ÿ·ç8¦×¦õ¿1
+N
+java:S1874‰"+Remove this use of "URL"; it is deprecated.(¼Âçòùÿÿÿÿ8§×¦õ¿1
 q
-java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(¾ä¦8ÖÒ­¾¿1
+java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(¾ä¦8°ÛÉõ¿1
+Q
+java:S1128"/Remove this unused import 'java.io.FileWriter'.(Ã‘ÅÃıÿÿÿÿ8°ÛÉõ¿1
+R
+java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8°ÛÉõ¿1
