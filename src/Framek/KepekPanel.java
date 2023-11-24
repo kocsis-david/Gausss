@@ -130,6 +130,9 @@ public class KepekPanel extends JFrame {
                                 continue;
                             }
                             BufferedImage[] resized = Resizer(gaussian1, gaussian2, dogi, canny);
+                            JLabel space1 = new JLabel(" ");
+                            JLabel space2 = new JLabel(" ");
+                            JLabel space3 = new JLabel(" ");
                             JLabel currentblurkepegy = new JLabel();
                             currentblurkepegy.setIcon(new ImageIcon(resized[0]));
                             JLabel currentblurkepketto = new JLabel();
@@ -144,10 +147,14 @@ public class KepekPanel extends JFrame {
                             panel.setBackground(Color.getHSBColor(i, i, i));
                             i+=0.1f;
                             if(i>1)i=0.5f;
+
                             panel.add(currentkepnev);
                             panel.add(currentblurkepegy);
+                            panel.add(space1);
                             panel.add(currentblurkepketto);
+                            panel.add(space2);
                             panel.add(currentdiffkep);
+                            panel.add(space3);
                             panel.add(currentcannykep);
                             ujpanel.add(panel);
                         }
@@ -183,8 +190,7 @@ public class KepekPanel extends JFrame {
         menuBar.add(share);
         setJMenuBar(menuBar);
     }
-
-    private BufferedImage[] Resizer(BufferedImage img, BufferedImage gaussian2, BufferedImage dogi, BufferedImage canny) {
+    public static BufferedImage[] Resizer(BufferedImage img, BufferedImage gaussian2, BufferedImage dogi, BufferedImage canny) {
         BufferedImage[] temp = new BufferedImage[4];
         temp[0] = img;
         temp[1] = gaussian2;
@@ -198,7 +204,7 @@ public class KepekPanel extends JFrame {
             return temp;
         }
 
-        if (img.getWidth() < 600 && img.getHeight() < 600) {
+        if (img.getWidth() < 400 && img.getHeight() < 400) {
             // If the image is smaller than 600x600, no need to resize
             return temp;
         } else if (img.getWidth() > img.getHeight()) {

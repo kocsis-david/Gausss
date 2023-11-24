@@ -1,39 +1,40 @@
 
 ˆ
-java:S1319"kThe type of "listOfRuns" should be an interface such as "List" rather than the implementation "LinkedList".(­ïİÌ8ŒşÀ1
+java:S1319"kThe type of "listOfRuns" should be an interface such as "List" rather than the implementation "LinkedList".(­ïİÌ8ÊÚà•À1
+W
+java:S1141""5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8ËÚà•À1
 K
-java:S1604ô"(Make this anonymous inner class a lambda(ÈşÔ÷ıÿÿÿÿ8ŒşÀ1
+java:S1604ö"(Make this anonymous inner class a lambda(ÈşÔ÷ıÿÿÿÿ8ËÚà•À1
 F
-java:S1604ˆ"(Make this anonymous inner class a lambda(¯ûõ8ŒşÀ1
+java:S1604Š"(Make this anonymous inner class a lambda(¯ûõ8ËÚà•À1
 t
-java:S1104"WMake listOfFiles a static final constant or non-public and provide accessors if needed.(Íúª•8ŒşÀ1
+java:S1104"WMake listOfFiles a static final constant or non-public and provide accessors if needed.(Íúª•8ËÚà•À1
 s
-java:S1104"VMake listOfRuns a static final constant or non-public and provide accessors if needed.(­ïİÌ8ŒşÀ1
+java:S1104"VMake listOfRuns a static final constant or non-public and provide accessors if needed.(­ïİÌ8ËÚà•À1
 N
-java:S1444"1Make this "public static listOfFiles" field final(Íúª•8ŒşÀ1
+java:S1444"1Make this "public static listOfFiles" field final(Íúª•8ÌÚà•À1
 M
-java:S1444"0Make this "public static listOfRuns" field final(­ïİÌ8ŒşÀ1
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÒÇ¶›8ŒşÀ1
+java:S1444"0Make this "public static listOfRuns" field final(­ïİÌ8ÌÚà•À1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÒÇ¶›8ÍÚà•À1
 :
-java:S2386"Make this member "protected".(Íúª•8šŒşÀ1
+java:S2386"Make this member "protected".(Íúª•8äÚà•À1
 :
-java:S2386"Make this member "protected".(­ïİÌ8šŒşÀ1
+java:S2386"Make this member "protected".(­ïİÌ8äÚà•À1
 {
-java:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ8ŒşÀ1
-G	java:S106&"+Replace this use of System.out by a logger.(¥™„È8ŸŒşÀ1
+java:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ8éÚà•À1
+L	java:S106%"+Replace this use of System.out by a logger.(ÜÎšÀıÿÿÿÿ8íÚà•À1
+G	java:S106*"+Replace this use of System.out by a logger.(¥™„È8íÚà•À1
 t
-java:S3776?"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(¿Ñ³Àüÿÿÿÿ8¡ŒşÀ1
-D	java:S131¦""Add a default case to this switch.(è€§åıÿÿÿÿ8¨ŒşÀ1
-D	java:S131Ô""Add a default case to this switch.(…»êùÿÿÿÿÿ8ªŒşÀ1
-I
-java:S1874ü"+Remove this use of "URL"; it is deprecated.(¾Ÿ·ç8¬ŒşÀ1
+java:S3776C"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(¿Ñ³Àüÿÿÿÿ8ôÚà•À1
+D	java:S131ª""Add a default case to this switch.(è€§åıÿÿÿÿ8‰Ûà•À1
+D	java:S131Ö""Add a default case to this switch.(…»êùÿÿÿÿÿ8Ûà•À1
 N
-java:S1874"+Remove this use of "URL"; it is deprecated.(¼Âçòùÿÿÿÿ8­ŒşÀ1
+java:S1874’"+Remove this use of "URL"; it is deprecated.(¼Âçòùÿÿÿÿ8™Ûà•À1
 q
-java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(¾ä¦8Õı…‘À1
+java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(¾ä¦8œÛà•À1
 Q
-java:S1128"/Remove this unused import 'java.io.FileWriter'.(Ã‘ÅÃıÿÿÿÿ8Õı…‘À1
+java:S1128"/Remove this unused import 'java.io.FileWriter'.(Ã‘ÅÃıÿÿÿÿ8Ûà•À1
 R
-java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8Õı…‘À1
+java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8Ûà•À1
 H
-java:S1128"+Remove this unused import 'java.util.Date'.(¸…¼ü8Õı…‘À1
+java:S1128"+Remove this unused import 'java.util.Date'.(¸…¼ü8Ûà•À1

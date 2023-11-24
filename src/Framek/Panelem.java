@@ -31,7 +31,11 @@ public class Panelem extends JFrame {
             Scanner scanner = new Scanner(new File("src/eredmenyek.txt"));
             while (scanner.hasNextLine()){
                 String[] line = scanner.nextLine().split(";");
-                listOfRuns.add(new Futtatas(new File(line[0]),new File(line[1]),new File(line[2]),new File(line[3]),Integer.parseInt(line[4]),Integer.parseInt(line[5]),line[6]));
+                try {
+                    listOfRuns.add(new Futtatas(new File(line[0]), new File(line[1]), new File(line[2]), new File(line[3]), Integer.parseInt(line[4]), Integer.parseInt(line[5]), line[6]));
+                }catch (Exception e){
+                    System.out.println("Hibás sor: "+line[0]+";"+line[1]+";"+line[2]+";"+line[3]+";"+line[4]+";"+line[5]+";"+line[6]);
+                }
             }
             scanner.close();
         } catch (FileNotFoundException e) {
@@ -194,8 +198,6 @@ public class Panelem extends JFrame {
         });
         file.add(savedRuns);
 
-
-
         JMenuItem changeTheme = new JMenuItem("Change Theme");
         changeTheme.addActionListener(e -> {
             JFrame themeFrame = new JFrame("Choose Theme");
@@ -249,8 +251,8 @@ public class Panelem extends JFrame {
                 // Ha a felhasználó megadott egy nevet, akkor megpróbáljuk megnyitni a dokumentumot
                     try {
                         // Megnyitjuk a dokumentumot
-                        URL url = new URL("https://docs.oracle.com/javase/7/docs/api/");
-                        Desktop.getDesktop().browse(url.toURI());
+                        File htmlFile = new File("./Javadoxhtml/index.html");
+                        Desktop.getDesktop().browse(htmlFile.toURI());
                     } catch (Exception ex) {
                         // Ha valami hiba történik, akkor megjelenítünk egy hibaüzenetet
                         JOptionPane.showMessageDialog(null, "Hiba történt az HTML dokumentum megnyitásakor: " + ex.getMessage());
@@ -279,8 +281,6 @@ public class Panelem extends JFrame {
             }
         });
         help.add(githubItem);
-
-
         file.add(openItem);
         run.add(runItem);
         menuBar.add(run);
