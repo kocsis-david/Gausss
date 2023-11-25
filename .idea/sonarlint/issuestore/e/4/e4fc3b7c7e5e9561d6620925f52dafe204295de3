@@ -1,8 +1,12 @@
 
 k
-java:S1192)"IDefine a constant instead of duplicating this literal "outpics/" 4 times.(üÿ¿®şÿÿÿÿ8¼ÜùÀ1
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(×ó‹ğüÿÿÿÿ8¢³Å÷¿1
+java:S1192*"IDefine a constant instead of duplicating this literal "outpics/" 4 times.(üÿ¿®şÿÿÿÿ8ÑÌ¬»À1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(×ó‹ğüÿÿÿÿ8ÒÌ¬»À1
 {
-java:S1210"YOverride "equals(Object obj)" to comply with the contract of the "compareTo(T o)" method.(ùõÚ¨ùÿÿÿÿ8¤³Å÷¿1
+java:S1210"YOverride "equals(Object obj)" to comply with the contract of the "compareTo(T o)" method.(ùõÚ¨ùÿÿÿÿ8×Ì¬»À1
+:
+java:S2061:"Make "writeObject" "private".(§Ã†8ÚÌ¬»À1
+9
+java:S2061D"Make "readObject" "private".(½•¹ê8ÛÌ¬»À1
 H
-java:S1128"+Remove this unused import 'java.util.Date'.(¸…¼ü8‡†úÀ1
+java:S1128"+Remove this unused import 'java.util.Date'.(¸…¼ü8İÌ¬»À1

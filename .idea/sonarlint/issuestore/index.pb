@@ -50,7 +50,5 @@ L
 script-dir/jquery-ui.min.css,7/8/78b0d4b41e7f0bd99d1d8098bcc879268f5c5408
 N
 script-dir/jquery-3.6.1.min.js,8/c/8c5e455e0f77d2dd0122545f99a92c59bd4a5a52
-N
-src/Framek/KepekPanelTest.java,2/e/2ebe7cee96df07cc46a5fa1d7d46d48cc32cdea6
 R
 "src/Junittests/KepekPanelTest.java,b/3/b3402bb5f6ab7da42a47edb99fa51192d957979b

@@ -1,9 +1,10 @@
 package Objektumok;
 
-import java.io.File;
+import javax.swing.*;
+import java.io.*;
 import java.util.Date;
 
-public class Futtatas implements Comparable<Futtatas> {
+public class Futtatas implements Serializable, Comparable<Futtatas> {
 File blur1;
 File blur2;
 File dog;
@@ -51,5 +52,33 @@ String date;
 
     public String getCanny() {
         return "outpics/"+canny.toString();
+    }
+
+    // Implement serialization methods
+    public void writeObject(ObjectOutputStream out) throws IOException {
+        out.writeObject(blur1);
+        out.writeObject(blur2);
+        out.writeObject(dog);
+        out.writeObject(canny);
+        out.writeInt(sigma1);
+        out.writeInt(sigma2);
+        out.writeObject(date);
+    }
+
+    public void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
+        blur1 = (File) in.readObject();
+        blur2 = (File) in.readObject();
+        dog = (File) in.readObject();
+        canny = (File) in.readObject();
+        sigma1 = in.readInt();
+        sigma2 = in.readInt();
+        date = (String) in.readObject();
+    }
+    public static void writeToFile(Futtatas obj, String filename, boolean append) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filename, append))) {
+            oos.writeObject(obj);
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "Hiba a mentés során!");
+        }
     }
 }

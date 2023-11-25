@@ -8,10 +8,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
 import java.util.Date;
 import java.util.LinkedList;
@@ -26,23 +23,35 @@ public class Panelem extends JFrame {
     public static File[] listOfFiles= folder.listFiles();
     public static LinkedList<Futtatas> listOfRuns = new LinkedList<>();
 
-    {
+
+    void addFromFile(LinkedList  listOfRuns) {
         try {
-            Scanner scanner = new Scanner(new File("src/eredmenyek.txt"));
-            while (scanner.hasNextLine()){
-                String[] line = scanner.nextLine().split(";");
+            // Open the file for reading
+            FileInputStream fileInputStream = new FileInputStream("./src/eredmenyek.txt");
+            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+
+            // Read serialized objects from the file
+            while (true) {
                 try {
-                    listOfRuns.add(new Futtatas(new File(line[0]), new File(line[1]), new File(line[2]), new File(line[3]), Integer.parseInt(line[4]), Integer.parseInt(line[5]), line[6]));
-                }catch (Exception e){
-                    System.out.println("Hibás sor: "+line[0]+";"+line[1]+";"+line[2]+";"+line[3]+";"+line[4]+";"+line[5]+";"+line[6]);
+                    Futtatas futtas = (Futtatas) objectInputStream.readObject();
+                    listOfRuns.add(futtas);
+                } catch (EOFException e) {
+                    // Reached the end of the file
+                    break;
+                } catch (Exception er) {
+                    // Error reading object from the file
+                    System.out.println("Hiba a fájl olvasása során: " + er.getMessage());
+                    break;
                 }
             }
-            scanner.close();
-        } catch (FileNotFoundException e) {
-           System.out.println("Nincs még nem volt előző futtatás");
+
+            // Close the streams
+            objectInputStream.close();
+            fileInputStream.close();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Nincs ilyen file");
         }
     }
-
 
 
     public Panelem(){
@@ -51,6 +60,7 @@ public class Panelem extends JFrame {
         setResizable(true);
         setVisible(true);
         selectedimage=listOfFiles[0];
+        addFromFile(listOfRuns);
         BufferedImage selimage = BufferFunctions.loadImage(selectedimage);
         selimage = BufferFunctions.reSizer(selimage);
         setSize(selimage.getWidth(),selimage.getHeight());
@@ -162,7 +172,6 @@ public class Panelem extends JFrame {
             savedRunsFrame.setResizable(true);
             savedRunsFrame.setVisible(true);
             JPanel savedRunsPanel = new JPanel();
-
             JComboBox<Futtatas> savedRunsFiles = new JComboBox<>(listOfRuns.toArray(new Futtatas[0]));
             JComboBox<String> savedRunschoose = new JComboBox<>(new String[]{"Blur1", "Blur2", "Dog","Canny"});
             savedRunsFiles.addActionListener(e1 -> {

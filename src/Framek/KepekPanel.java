@@ -10,9 +10,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 public class KepekPanel extends JFrame {
     BufferedImage gaussian1;
@@ -86,20 +84,31 @@ public class KepekPanel extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    String pathname=path.getName().substring(0, path.getName().length()-4);
-                    ImageIO.write(gaussian1, "png", new File("outpics/"+pathname+"b1"+".png"));
-                    ImageIO.write(gaussian2, "png", new File("outpics/"+pathname+"b2"+".png"));
-                    ImageIO.write(dogi, "png", new File("outpics/"+pathname+"dog"+".png"));
-                    ImageIO.write(canny, "png", new File("outpics/"+pathname+"canny"+".png"));
-                    Futtatas futtatas = new Futtatas(new File(pathname+"b1"+".png"), new File(pathname+"b2"+".png"), new File(pathname+"dog"+".png"), new File(pathname+"canny"+".png"), sigma1, sigma2, new java.util.Date().toString());
+                    String pathname = path.getName().substring(0, path.getName().length() - 4);
+
+                    // Write images to PNG files
+                    ImageIO.write(gaussian1, "png", new File("outpics/" + pathname + "b1" + ".png"));
+                    ImageIO.write(gaussian2, "png", new File("outpics/" + pathname + "b2" + ".png"));
+                    ImageIO.write(dogi, "png", new File("outpics/" + pathname + "dog" + ".png"));
+                    ImageIO.write(canny, "png", new File("outpics/" + pathname + "canny" + ".png"));
+
+                    // Create Futtatas object with serialized file paths
+                    Futtatas futtatas = new Futtatas(new File(pathname + "b1" + ".png"),
+                            new File(pathname + "b2" + ".png"), new File(pathname + "dog" + ".png"),
+                            new File(pathname + "canny" + ".png"), sigma1, sigma2, new java.util.Date().toString());
+
+                    // Add Futtatas object to list of runs
                     Panelem.listOfRuns.add(futtatas);
-                    File file = new File("src/eredmenyek.txt");
-                    FileWriter fileWriter = new FileWriter(file, true);
-                        fileWriter.write(futtatas.toString()+"\n");
-                        fileWriter.close();
+
+                    // Open file for writing in append mode
+                   String file = "src/eredmenyek.txt";
+                    Futtatas.writeToFile(futtatas, String.valueOf(file), true);
+
+
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
                 }
+
                 JOptionPane.showMessageDialog(null, "Elmentve!");
 
             }
