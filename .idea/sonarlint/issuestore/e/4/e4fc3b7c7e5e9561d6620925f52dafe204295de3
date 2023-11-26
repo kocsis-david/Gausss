@@ -1,12 +1,16 @@
 
-k
-java:S1192*"IDefine a constant instead of duplicating this literal "outpics/" 4 times.(üÿ¿®þÿÿÿÿ8ÑÌ¬»À1
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(×ó‹ðüÿÿÿÿ8ÒÌ¬»À1
+L
+java:S3740Y"/Provide the parametrized type for this generic.(åÍ³8àæïÐÀ1
+f
+java:S1192J"IDefine a constant instead of duplicating this literal "outpics/" 4 times.(û–ÞÁ8àæïÐÀ1
+Ž
+java:S1319%"qThe return type of this method should be an interface such as "List" rather than the implementation "LinkedList".(ãõ‘©8àæïÐÀ1
+…
+java:S1319Y"hThe type of "futasok" should be an interface such as "List" rather than the implementation "LinkedList".(åÍ³8àæïÐÀ1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(×ó‹ðüÿÿÿÿ8áæïÐÀ1
 {
-java:S1210"YOverride "equals(Object obj)" to comply with the contract of the "compareTo(T o)" method.(ùõÚ¨ùÿÿÿÿ8×Ì¬»À1
-:
-java:S2061:"Make "writeObject" "private".(§Ã†8ÚÌ¬»À1
-9
-java:S2061D"Make "readObject" "private".(½•¹ê8ÛÌ¬»À1
-H
-java:S1128"+Remove this unused import 'java.util.Date'.(¸…¼ü8ÝÌ¬»À1
+java:S1210="YOverride "equals(Object obj)" to comply with the contract of the "compareTo(T o)" method.(ùõÚ¨ùÿÿÿÿ8ôæïÐÀ1
+Z
+java:S1128"8Remove this unused import 'com.google.gson.GsonBuilder'.(”«à¬ÿÿÿÿÿ8úæïÐÀ1
+`
+java:S1128">Remove this unused import 'com.google.gson.reflect.TypeToken'.(Ýªýñøÿÿÿÿ8úæïÐÀ1

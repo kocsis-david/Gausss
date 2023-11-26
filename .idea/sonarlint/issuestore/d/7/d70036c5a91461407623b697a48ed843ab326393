@@ -1,44 +1,46 @@
 
-g	java:S112#"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8†ºëºÀ1
-g	java:S112m"FDefine and throw a dedicated exception instead of using a generic one.(¼ÿ¾¹ÿÿÿÿÿ8†ºëºÀ1
+g	java:S112#"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8”ğØÎÀ1
+g	java:S112i"FDefine and throw a dedicated exception instead of using a generic one.(¼ÿ¾¹ÿÿÿÿÿ8•ğØÎÀ1
 f
-java:S1192Z"IDefine a constant instead of duplicating this literal "outpics/" 4 times.(Èùˆ8ˆºëºÀ1
-r	java:S117Q"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙÁÿ´ûÿÿÿÿ8‰ºëºÀ1
+java:S1192Z"IDefine a constant instead of duplicating this literal "outpics/" 4 times.(Èùˆ8˜ğØÎÀ1
+r	java:S117Q"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙÁÿ´ûÿÿÿÿ8˜ğØÎÀ1
 J
-java:S1604S"(Make this anonymous inner class a lambda(ìÃ€™üÿÿÿÿ8‰ºëºÀ1
+java:S1604S"(Make this anonymous inner class a lambda(ìÃ€™üÿÿÿÿ8˜ğØÎÀ1
 J
-java:S1604z"(Make this anonymous inner class a lambda(Ô¶µÿşÿÿÿÿ8‰ºëºÀ1
+java:S1604v"(Make this anonymous inner class a lambda(Ô¶µÿşÿÿÿÿ8˜ğØÎÀ1
 E
-java:S1604w"(Make this anonymous inner class a lambda(Òé€™8‰ºëºÀ1
+java:S1604s"(Make this anonymous inner class a lambda(Òé€™8˜ğØÎÀ1
 F
-java:S1604¾"(Make this anonymous inner class a lambda(˜÷÷Ù8‰ºëºÀ1
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÒÇ¶›8‹ºëºÀ1
+java:S1604º"(Make this anonymous inner class a lambda(˜÷÷Ù8™ğØÎÀ1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÒÇ¶›8šğØÎÀ1
 M
-java:S1948"+Make "gaussian1" transient or serializable.(Ã™„òøÿÿÿÿ8áºëºÀ1
+java:S1948"+Make "gaussian1" transient or serializable.(Ã™„òøÿÿÿÿ8€ñØÎÀ1
 H
-java:S1948"+Make "gaussian2" transient or serializable.(ãí õ8áºëºÀ1
+java:S1948"+Make "gaussian2" transient or serializable.(ãí õ8€ñØÎÀ1
 H
-java:S1948"&Make "dogi" transient or serializable.(‚ –áøÿÿÿÿ8áºëºÀ1
+java:S1948"&Make "dogi" transient or serializable.(‚ –áøÿÿÿÿ8€ñØÎÀ1
 D
-java:S1948"'Make "canny" transient or serializable.(áªèŒ8áºëºÀ1
+java:S1948"'Make "canny" transient or serializable.(áªèŒ8€ñØÎÀ1
 i
-java:S3252"LUse static access with "javax.swing.WindowConstants" for "DISPOSE_ON_CLOSE".(Òœ Ğ8âºëºÀ1
+java:S3252"LUse static access with "javax.swing.WindowConstants" for "DISPOSE_ON_CLOSE".(Òœ Ğ8ñØÎÀ1
 v
-java:S3252G"YUse static access with "javax.swing.ScrollPaneConstants" for "VERTICAL_SCROLLBAR_ALWAYS".(àıÍ8æºëºÀ1
+java:S3252G"YUse static access with "javax.swing.ScrollPaneConstants" for "VERTICAL_SCROLLBAR_ALWAYS".(àıÍ8…ñØÎÀ1
 x
-java:S3252G"[Use static access with "javax.swing.ScrollPaneConstants" for "HORIZONTAL_SCROLLBAR_ALWAYS".(àıÍ8çºëºÀ1
+java:S3252G"[Use static access with "javax.swing.ScrollPaneConstants" for "HORIZONTAL_SCROLLBAR_ALWAYS".(àıÍ8…ñØÎÀ1
 i
-java:S3252~"LUse static access with "javax.swing.WindowConstants" for "DISPOSE_ON_CLOSE".(×Ğ‘÷8íºëºÀ1
+java:S3252z"LUse static access with "javax.swing.WindowConstants" for "DISPOSE_ON_CLOSE".(×Ğ‘÷8ŠñØÎÀ1
 `
-java:S1117…"=Rename "gaussian1" which hides the field declared at line 16.(›ıÊ€ùÿÿÿÿ8íºëºÀ1
+java:S1117"=Rename "gaussian1" which hides the field declared at line 16.(›ıÊ€ùÿÿÿÿ8ŠñØÎÀ1
 `
-java:S1117†"=Rename "gaussian2" which hides the field declared at line 17.(Æûÿÿÿÿ8îºëºÀ1
+java:S1117‚"=Rename "gaussian2" which hides the field declared at line 17.(Æûÿÿÿÿ8‹ñØÎÀ1
 V
-java:S1117‡"8Rename "dogi" which hides the field declared at line 18.(Ì·ò€8îºëºÀ1
+java:S1117ƒ"8Rename "dogi" which hides the field declared at line 18.(Ì·ò€8‹ñØÎÀ1
 \
-java:S1117ˆ"9Rename "canny" which hides the field declared at line 19.(æÏ©¨şÿÿÿÿ8îºëºÀ1
+java:S1117„"9Rename "canny" which hides the field declared at line 19.(æÏ©¨şÿÿÿÿ8‹ñØÎÀ1
 |
-java:S3252«"YUse static access with "javax.swing.ScrollPaneConstants" for "VERTICAL_SCROLLBAR_ALWAYS".(úéüûÿÿÿÿ8ğºëºÀ1
+java:S3252§"YUse static access with "javax.swing.ScrollPaneConstants" for "VERTICAL_SCROLLBAR_ALWAYS".(úéüûÿÿÿÿ8ñØÎÀ1
 ~
-java:S3252«"[Use static access with "javax.swing.ScrollPaneConstants" for "HORIZONTAL_SCROLLBAR_ALWAYS".(úéüûÿÿÿÿ8ğºëºÀ1
-k	java:S100Ê"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Î—Ú‚8òºëºÀ1
+java:S3252§"[Use static access with "javax.swing.ScrollPaneConstants" for "HORIZONTAL_SCROLLBAR_ALWAYS".(úéüûÿÿÿÿ8ñØÎÀ1
+k	java:S100Æ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Î—Ú‚8ñØÎÀ1
+Z
+java:S1128"8Remove this unused import 'javax.swing.text.GapContent'.(Í¢ºöÿÿÿÿÿ8­ıÖÏÀ1

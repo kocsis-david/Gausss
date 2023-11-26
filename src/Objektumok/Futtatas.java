@@ -1,19 +1,30 @@
 package Objektumok;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
+
 import javax.swing.*;
 import java.io.*;
-import java.util.Date;
+import java.lang.reflect.Type;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
-public class Futtatas implements Serializable, Comparable<Futtatas> {
-File blur1;
-File blur2;
-File dog;
-File canny;
-int sigma1;
-int sigma2;
-String date;
 
-    public Futtatas(File blur1, File blur2, File dog, File canny, int sigma1, int sigma2, String date) {
+public class Futtatas implements Comparable<Futtatas> {
+
+    private String blur1;
+    private String blur2;
+    private String dog;
+    private String canny;
+    private int sigma1;
+    private int sigma2;
+    private String date;
+
+    public Futtatas(String blur1, String blur2, String dog, String canny, int sigma1, int sigma2, String date) {
         this.blur1 = blur1;
         this.blur2 = blur2;
         this.dog = dog;
@@ -22,9 +33,30 @@ String date;
         this.sigma2 = sigma2;
         this.date = date;
     }
-    public String toString(){
-        return blur1.getName()+";"+blur2.getName()+";"+dog.getName()+";"+canny.getName()+";"+sigma1+";"+sigma2+";"+date;
+
+    public static LinkedList<Futtatas> futasokFilebololvas() {
+        LinkedList<Futtatas> futasok = new LinkedList<>();
+        try {
+            // create Gson instance
+            Gson gson = new Gson();
+
+            // create a reader
+            Reader reader = Files.newBufferedReader(Paths.get("futasok.json"));
+
+            // convert JSON array to list of books
+            List<Futtatas> futas = Arrays.asList(gson.fromJson(reader, Futtatas[].class));
+
+            reader.close();
+
+            futasok.addAll(futas);
+
+            return futasok;
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Még nem történtek futások!");
+        }
+        return futasok;
     }
+
     @Override
     public int compareTo(Futtatas o) {
         return date.compareTo(o.date);
@@ -39,46 +71,36 @@ String date;
     }
 
     public String getBlur1() {
-        return "outpics/"+blur1.toString();
+        return "outpics/" + blur1;
     }
 
     public String getBlur2() {
-        return "outpics/"+blur2.toString();
+        return "outpics/" + blur2;
     }
 
     public String getDog() {
-        return "outpics/"+dog.toString();
+        return "outpics/" + dog;
     }
 
     public String getCanny() {
-        return "outpics/"+canny.toString();
+        return "outpics/" + canny;
     }
 
-    // Implement serialization methods
-    public void writeObject(ObjectOutputStream out) throws IOException {
-        out.writeObject(blur1);
-        out.writeObject(blur2);
-        out.writeObject(dog);
-        out.writeObject(canny);
-        out.writeInt(sigma1);
-        out.writeInt(sigma2);
-        out.writeObject(date);
-    }
+    public static void futasokFilebaIr(LinkedList futasok){
+        try {
+            // create Gson instance
+            Gson gson = new Gson();
 
-    public void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
-        blur1 = (File) in.readObject();
-        blur2 = (File) in.readObject();
-        dog = (File) in.readObject();
-        canny = (File) in.readObject();
-        sigma1 = in.readInt();
-        sigma2 = in.readInt();
-        date = (String) in.readObject();
-    }
-    public static void writeToFile(Futtatas obj, String filename, boolean append) {
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filename, append))) {
-            oos.writeObject(obj);
-        } catch (IOException e) {
-            JOptionPane.showMessageDialog(null, "Hiba a mentés során!");
+            // create a writer
+            Writer writer = Files.newBufferedWriter(Paths.get("futasok.json"));
+
+            // convert books object to JSON file
+            gson.toJson(futasok, writer);
+            // close writer
+            writer.close();
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Hiba a fájl írásakor!");
         }
     }
 }
+

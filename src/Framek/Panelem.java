@@ -10,9 +10,7 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.*;
 import java.net.URL;
-import java.util.Date;
-import java.util.LinkedList;
-import java.util.Scanner;
+import java.util.*;
 
 public class Panelem extends JFrame {
     private File selectedimage;
@@ -24,34 +22,7 @@ public class Panelem extends JFrame {
     public static LinkedList<Futtatas> listOfRuns = new LinkedList<>();
 
 
-    void addFromFile(LinkedList  listOfRuns) {
-        try {
-            // Open the file for reading
-            FileInputStream fileInputStream = new FileInputStream("./src/eredmenyek.txt");
-            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
 
-            // Read serialized objects from the file
-            while (true) {
-                try {
-                    Futtatas futtas = (Futtatas) objectInputStream.readObject();
-                    listOfRuns.add(futtas);
-                } catch (EOFException e) {
-                    // Reached the end of the file
-                    break;
-                } catch (Exception er) {
-                    // Error reading object from the file
-                    System.out.println("Hiba a fájl olvasása során: " + er.getMessage());
-                    break;
-                }
-            }
-
-            // Close the streams
-            objectInputStream.close();
-            fileInputStream.close();
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Nincs ilyen file");
-        }
-    }
 
 
     public Panelem(){
@@ -60,7 +31,9 @@ public class Panelem extends JFrame {
         setResizable(true);
         setVisible(true);
         selectedimage=listOfFiles[0];
-        addFromFile(listOfRuns);
+        listOfRuns = Futtatas.futasokFilebololvas();
+
+
         BufferedImage selimage = BufferFunctions.loadImage(selectedimage);
         selimage = BufferFunctions.reSizer(selimage);
         setSize(selimage.getWidth(),selimage.getHeight());
@@ -72,6 +45,15 @@ public class Panelem extends JFrame {
         this.add(hatter,BorderLayout.CENTER);
         hatter.setVisible(true);
         pack();
+
+        this.addWindowListener(new java.awt.event.WindowAdapter() {
+            @Override
+            public void windowClosing(java.awt.event.WindowEvent windowEvent) {
+                Futtatas.futasokFilebaIr(listOfRuns);
+            }
+        });
+
+
     }
 
     private void addMenu() {
@@ -298,6 +280,7 @@ public class Panelem extends JFrame {
         menuBar.add(help);
         setJMenuBar(menuBar);
     }
+
 
 
 }

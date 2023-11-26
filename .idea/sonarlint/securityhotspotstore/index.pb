@@ -4,8 +4,6 @@
 :
 
 Gausss.iml,3/a/3a155bb11836cfd2f2815c12bd0b0d86b5f1aa77
-B
-src/eredmenyek.txt,5/1/516f73227670864b79a237636b86a876a9b7ecc7
 X
 (src/Algoritmus/DifferenceOfGaussian.java,9/7/9779b98c67cd77ef110e048c96236c4dcafe9013
 S
@@ -52,3 +50,8 @@ N
 script-dir/jquery-3.6.1.min.js,8/c/8c5e455e0f77d2dd0122545f99a92c59bd4a5a52
 R
 "src/Junittests/KepekPanelTest.java,b/3/b3402bb5f6ab7da42a47edb99fa51192d957979b
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+<
+futasok.json,8/3/83dd03d674619397fc349f63933aaae7fc23659a

@@ -93,16 +93,12 @@ public class KepekPanel extends JFrame {
                     ImageIO.write(canny, "png", new File("outpics/" + pathname + "canny" + ".png"));
 
                     // Create Futtatas object with serialized file paths
-                    Futtatas futtatas = new Futtatas(new File(pathname + "b1" + ".png"),
-                            new File(pathname + "b2" + ".png"), new File(pathname + "dog" + ".png"),
-                            new File(pathname + "canny" + ".png"), sigma1, sigma2, new java.util.Date().toString());
+                    Futtatas futtatas = new Futtatas(pathname + "b1" + ".png",
+                            pathname + "b2" + ".png", pathname + "dog" + ".png",
+                           pathname + "canny" + ".png", sigma1, sigma2, new java.util.Date().toString());
 
                     // Add Futtatas object to list of runs
                     Panelem.listOfRuns.add(futtatas);
-
-                    // Open file for writing in append mode
-                   String file = "src/eredmenyek.txt";
-                    Futtatas.writeToFile(futtatas, String.valueOf(file), true);
 
 
                 } catch (IOException ex) {
